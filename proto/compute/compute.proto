@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package auth;
+
+import "google/protobuf/timestamp.proto";
+
+message Volume {
+	string name=1;
+	string uuid = 2;
+
+	uint64 size = 3;
+
+	google.protobuf.Timestamp last_updated = 5;
+  google.protobuf.Timestamp created = 25;
+  google.protobuf.Timestamp disabled = 26;
+}
+
+message Instance {
+  string name = 1;
+  string uuid = 2;
+
+
+	uint64 ram = 25;
+	uint64 disk = 26;
+
+	repeated Volume volumes = 35;
+}
