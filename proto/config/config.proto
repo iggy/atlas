@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package auth;
+
+import "google/protobuf/timestamp.proto";
+
+message Zone {
+	string name = 1;
+	string uuid = 2;
+}
